@@ -1,0 +1,123 @@
+@import "../../styles/mixin.scss";
+
+@mixin input() {
+    padding: 0.6em;
+    margin-top: 0.5em;
+    border: $light-violet 1px solid ;
+    border-radius: 8px;
+    font-size: $font-heading-l;
+    font-family: $Space;
+    box-sizing: border-box;
+    width: 100%; 
+
+    &::placeholder {
+        opacity: 25%;
+    }
+}
+
+.field {
+    margin-top: 1.56rem;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    width: 375px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.title {
+    color: $very-dark-violet;
+    font-size: $font-body-m;
+    letter-spacing: $spacing-body-m;
+}
+
+.input {
+    @include input;
+
+    &:focus {
+            outline:none;
+            background: linear-gradient(white, white) padding-box,
+            linear-gradient(90deg,hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+            border-width: 1px;
+            border-style:solid;
+            border-color:transparent;
+            border-radius: 10px;
+    }
+}
+
+
+.invalidText {
+    font-size:$font-body-s;
+    color: $red;
+    position: absolute;
+    margin-top: 0.25em;
+}
+
+.formSplit {
+    display: flex;
+    gap: 8px;
+    margin-top: 1.56rem;
+}
+
+.dateSplit {
+    display: flex;
+    gap: 8px;
+}
+
+.dateInput {
+    @include input;
+    width: 50%;
+    &:focus {
+        outline:none;
+        background: linear-gradient(white, white) padding-box,
+        linear-gradient(90deg,hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+        border-width: 1px;
+        border-style:solid;
+        border-color:transparent;
+        border-radius: 10px;
+}
+}
+
+.inputNotValid {
+    outline: none;
+    border: 1px solid $red;
+}
+
+.button {
+    padding: 0.875em;
+    border: 0;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+    background-color: $very-dark-violet;
+    font-size: $font-heading-l;
+    font-family: $Space;
+    margin-top: 1.86rem;
+    cursor: pointer;
+}
+
+// -----Success Page-----
+
+.icon {
+    width: 80px;
+    height: 80px;
+}
+
+h1 {
+    font-size: $font-heading-xl;
+    letter-spacing: $spacing-heading-xl;
+    color: $very-dark-violet;
+    margin-top: 2.5rem;
+}
+
+p {
+    font-size: $font-heading-l;
+    color: $dark-violet;
+    margin-top:0;
+}

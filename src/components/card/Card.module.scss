@@ -1,0 +1,158 @@
+@import "../../styles/mixin.scss";
+
+.canva {
+    height: 18.5rem;
+}
+
+.bgImg {
+    width: 100%;
+    height: 15rem;
+    background-image: url(../../images/bg-main-mobile.png);
+    background-size: cover;
+}
+
+.container {
+    width: 375px;
+    height: 120%;
+    padding: 2em 1em;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 40% 20% 40%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 100%;
+}
+
+.cardBackDetails {
+    background-image: url('../../images/bg-card-back.png');
+    background-size: cover;
+    width: 18rem;
+    height: 9.8rem;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cardFrontDetails {
+    background-image: url('../../images/bg-card-front.png');
+    background-size: cover;
+    width: 18rem;
+    height: 9.8rem;
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+// Front card detail
+
+
+.cardLogo {
+    width: 20%;
+}
+
+.cardNumber {
+    color: white;
+    letter-spacing: 0.138rem;
+    margin-top: 2rem;
+    font-size: 1.185rem;
+}
+
+.cardDetailBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+}
+
+.cardName {
+    color: white;
+    font-size: 0.56rem;
+    letter-spacing: $spacing-body-m;
+}
+
+.cardDate {
+    display: flex;
+    color: white;
+    font-size: 0.56rem;
+    letter-spacing: $spacing-body-m;
+}
+
+
+// Back card detail
+
+.cardCvc {
+    font-size: 0.56rem;
+    letter-spacing: $spacing-body-m;
+    position: relative;
+    left: 14.5rem;
+    top: 4.5rem;
+    color: white;
+}
+
+
+
+@media (min-width: 1280px) {
+    .canva {
+        height: 100vh;
+        width: 50vw;
+    }
+    .bgImg {
+        width: 66%;
+        height:  100vh;
+        background-image: url(../../images/bg-main-desktop.png);
+    }
+
+    .container {
+        height: 100%;
+        width: 150%;
+        padding: 10.25em 0 10.25em 10.25em;
+        grid-template-rows: 245px 35px 245px;
+
+    }
+
+    .cardBackDetails {
+        height: 245px;
+        width: 447px;
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+    }
+
+    .cardFrontDetails {
+        height: 245px;
+        width: 447px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        padding: 2em;
+    }
+
+    .cardNumber {
+        letter-spacing: 3.4px;
+        margin-top: 3.3rem;
+        font-size: $font-heading-xl;
+    }
+
+    .cardName {
+        color: white;
+        font-size: $font-body-l;
+        letter-spacing: $spacing-body-m;
+    }
+    
+    .cardDate {
+        color: white;
+        font-size: $font-body-l;
+        letter-spacing: $spacing-body-m;
+    }
+
+    .cardCvc {
+        font-size: $font-body-l;
+        letter-spacing: $spacing-body-m;
+        position: relative;
+        left: 22.5rem;
+        top: 7rem;
+        color: white;
+    }
+}

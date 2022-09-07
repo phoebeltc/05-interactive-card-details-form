@@ -1,0 +1,11 @@
+@import './mixin.scss';
+
+@media (min-width: 1280px) {
+
+    .component {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
